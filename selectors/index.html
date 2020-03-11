@@ -114,17 +114,20 @@
             //     $('#coords').html('Coords: Y: '+e.clientY+" X: "+ e.clientX);
             // });
 
-            $('input').focus(function(){
-                //alert('Focus');
-                $(this).css('background', 'pink');
-            });
-            $('input').blur(function(){
-                //alert('Focus');
-                $(this).css('background', 'lightblue');
-            });
-            $('input').keyup(function(e){
-                console.log('keyup: '+e.target.value);
+            // $('input').focus(function(){
+            //     //alert('Focus');
+            //     $(this).css('background', 'pink');
+            // });
+            // $('input').blur(function(){
+            //     //alert('Focus');
+            //     $(this).css('background', 'lightblue');
+            // });
+            // $('input').keyup(function(e){
+            //     console.log('keyup: '+e.target.value);
                 
+            // });
+            $('select#gender').change(function(e){
+                alert('changed:'+e.target.value);
             });
 
         }); 
