@@ -45,6 +45,23 @@
                      deserunt mollit anim id est laborum.</p>
 
                 <h1 id="coords"></h1>
+                <hr>
+                <form>
+                    <label>Name</label><br>
+                    <input type="text" id="name" name="name">
+                    <br>
+                    <label>Email</label><br>
+                    <input type="email" id="email" name="email">
+                    <br>
+                    <label>Gender</label><br>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Gender is a construct</option>
+                    </select>
+                    <br>
+                    <input type="submit" value="submit">
+                </form>
             </div>
         <script>
             // document ready waits for everything to load
@@ -94,7 +111,7 @@
                 // alert(e.currentTarget.className);
             });
             $(document).on('mousemove', function(e){
-                $('#coords').html('Coords: Y'+e.clientY+"X:"+e.clientX);
+                $('#coords').html('Coords: Y: '+e.clientY+" X: "+ e.clientX);
             });
 
         }); 
