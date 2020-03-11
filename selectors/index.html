@@ -51,7 +51,7 @@
                     <input type="text" id="name" name="name">
                     <br>
                     <label>Email</label><br>
-                    <input type="email" id="email" name="email">
+                    <input type="text" id="email" name="email">
                     <br>
                     <label>Gender</label><br>
                     <select id="gender" name="gender">
@@ -126,9 +126,16 @@
             //     console.log('keyup: '+e.target.value);
                 
             // });
-            $('select#gender').change(function(e){
-                alert('changed:'+e.target.value);
+            // $('select#gender').change(function(e){
+            //     alert('changed:'+e.target.value);
+            // });
+
+            $('form').submit(function(e){
+                e.preventDefault();
+                let name = $('input#name').val();
+                console.log(name);
             });
+            
 
         }); 
         </script>
