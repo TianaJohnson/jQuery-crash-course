@@ -43,6 +43,8 @@
                      eu fugiat nulla pariatur. Excepteur sint occaecat
                      cupidatat non proident, sunt in culpa qui officia 
                      deserunt mollit anim id est laborum.</p>
+
+                <h1 id="coords"></h1>
             </div>
         <script>
             // document ready waits for everything to load
@@ -89,10 +91,13 @@
                 //alert(e.currentTarget.id);
                 // alert(e.currentTarget.innerHTML);
                 // alert(e.currentTarget.outerHTML);
-                alert(e.currentTarget.className);
+                // alert(e.currentTarget.className);
+            });
+            $(document).on('mousemove', function(e){
+                $('#coords').html('Coords: Y'+e.clientY+"X:"+e.clientX);
             });
 
-        });
+        }); 
         </script>
     </body>
 </html>   
