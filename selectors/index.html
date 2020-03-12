@@ -26,6 +26,10 @@
                 margin: auto;
                 padding: 10px;
             }
+            .myClass {
+                color: blue;
+                background: black;
+            }
         </style>
     </head>
     <body>
@@ -42,6 +46,7 @@
             $(document).ready(function(){
                // $('p.para1').css('color','red');
                 $('p.para1').css({color: 'red', background:'#ccc'});
+                $('p.para2').addClass('myClass');
             })
         </script>
     </body>
