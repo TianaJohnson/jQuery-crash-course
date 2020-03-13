@@ -42,13 +42,14 @@
                 <p class="para2">This is another paragraph</p>
                 <div id='myDiv'></div>
                 <input type="text" id="newItem">
-                <ul>
+                <ul id="list">
                     <li>List Item 1</li>
                     <li>List Item 2</li>
                     <li>List Item 3</li>
                     <li>List Item 4</li>
                 </ul>
                 <a href="http://google.com">Gooooogle</a>
+                <ul id="users"></ul>
                 </div>
         <script>
             $(document).ready(function(){
@@ -89,12 +90,15 @@
                     }
                 });
 
-                let myArr =['Brad','Ryan','Tiana','Kelly'];
-                $.each(myArr, function(i, val){
-                    console.log(val);
-                })
+                // let myArr =['Brad','Ryan','Tiana','Kelly'];
+                // $.each(myArr, function(i, val){
+                //     $('#users').append('<li>'+val+'</li>');
+                // });
 
-
+                let newArr=$('ul#list li').toArray();
+                $.each(newArr, function(i, val){
+                    console.log(val.innerHTML);
+                });
             })
         </script>
     </body>
