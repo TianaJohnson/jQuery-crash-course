@@ -41,6 +41,7 @@
                 <p class="para1">This is a pararaph</p>
                 <p class="para2">This is another paragraph</p>
                 <div id='myDiv'></div>
+                <input type="text" id="newItem">
                 <ul>
                     <li>List Item 1</li>
                     <li>List Item 2</li>
@@ -76,7 +77,15 @@
                 // alert($('a').attr('href'));
                 // $('a').removeAttr('target');
                 // $('p').wrap('<h1>');
-                    $('p').wrapAll('<h1>');
+                // $('p').wrapAll('<h1>');
+                $('#newItem').keyup(function(e){
+                    let code =e.which;
+                    // code fore enter is 13
+                    if(code == 13){
+                        e.preventDefault();
+                        $('ul').append('<li>'+e.target.value+'</li>')
+                    }
+                })
 
             })
         </script>
