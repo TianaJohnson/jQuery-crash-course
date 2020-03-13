@@ -78,6 +78,8 @@
                 // $('a').removeAttr('target');
                 // $('p').wrap('<h1>');
                 // $('p').wrapAll('<h1>');
+                    // inouts a new line through text box, 
+                    //not saved after reload in current form
                 $('#newItem').keyup(function(e){
                     let code =e.which;
                     // code fore enter is 13
@@ -85,7 +87,13 @@
                         e.preventDefault();
                         $('ul').append('<li>'+e.target.value+'</li>')
                     }
+                });
+
+                let myArr =['Brad','Ryan','Tiana','Kelly'];
+                $.each(myArr, function(i, val){
+                    console.log(val);
                 })
+
 
             })
         </script>
