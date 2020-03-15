@@ -50,7 +50,7 @@
             <button id="btnSlideUp">Slide Up</button>
             <button id="btnSlideDown">Slide Down</button>
             <button id="btnSlideToggle">Slide Toggle</button>  
-            
+            <button id="stop">Stop</button>
             <hr>
 
             <div id="box"><h1>Hello World</h1></div>
@@ -85,6 +85,9 @@
                 // toggle between slide up/down
                 $('#btnSlideToggle').click(function(){
                     $('#box').slideToggle(1000);
+                });
+                $('#stop').click(function(){
+                    $('#box').stop();
                 });
             });
 
