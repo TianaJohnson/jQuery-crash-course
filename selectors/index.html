@@ -47,6 +47,12 @@
             
             <hr>
 
+            <button id="btnSlideUp">Slide Up</button>
+            <button id="btnSlideDown">Slide Down</button>
+            <button id="btnSlideToggle">Slide Toggle</button>  
+            
+            <hr>
+
             <div id="box"><h1>Hello World</h1></div>
         </div>
 
@@ -67,6 +73,17 @@
                 // on click fade out toggle on click fade in
                 $('#btnFadeToggle').click(function(){
                     $('#box').fadeToggle(1000);
+                });
+
+                $('#btnSlideDown').click(function(){
+                    $('#box').slideDown(3000);
+                });
+                $('#btnSlideUp').click(function(){
+                    $('#box').slideUp(3000);
+                });
+
+                $('#btnSlideToggle').click(function(){
+                    $('#box').slideToggle(1000);
                 });
             });
 
