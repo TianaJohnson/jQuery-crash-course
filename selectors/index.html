@@ -34,6 +34,13 @@
                 padding: 40px;
                 text-align: center;
             }
+
+            #box2 {
+                background: red;
+                width:100px;
+                height: 100px;
+                position: relative;
+            }
         </style>
     </head>
     <body>
@@ -57,9 +64,10 @@
 
             <hr>
 
-            <button id="btnMoveLeft">Move Left</button>
-            <button id="btnMoveRight">Move Right</button>
-            <button id="btnMoveAround">Fade Toggle</button> 
+            <button id="moveLeft">Move Left</button>
+            <button id="moveRight">Move Right</button>
+            <button id="moveAround">Fade Toggle</button> 
+            <br>
             <div id="box2"></div>
 
         </div>
@@ -97,6 +105,11 @@
                 // click to stop action in action
                 $('#stop').click(function(){
                     $('#box').stop();
+                });
+                $('#moveRight').click(function(){
+                    ('#box2').animate({
+                        left: 500
+                    });
                 });
             });
 
