@@ -52,10 +52,17 @@
 
         <script>
             $(document).ready(function() {
+                // fade out on click
                 $('#btnFadeOut').click(function(){
-                    $('#box').fadeOut(3000);
+                    $('#box').fadeOut(3000, function(){
+                        $('#btnFadeOut').text('Buh Bye');
+                    });
                 });
-
+                $('#btnFadeIn').click(function(){
+                    $('#box').fadeIn(3000, function(){
+                        $('#btnFadeIn').text('Sup');
+                    });
+                });
             });
 
         </script>
