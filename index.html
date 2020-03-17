@@ -1,48 +1,44 @@
 
-
 <!DOCTYPE html>
 
     <head>
-        <title> jQuery Crash Course | Selectors</title>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <style>
-            body{
-                font-size: 17px;
-                font-family: ariel;
-                background: #f4f4f4;
-                line-height: 1.5em;
-            }
-            header {
-                background: #333;
-                color: #fff;
-                padding: 20px;
-                text-align: center;
-                border-bottom: 4px #000 solid;
-                margin-bottom: 10px;
-            }
-            #container {
-                width: 90%;
-                margin: auto;
-                padding: 10px;
-            }
+            <title> jQuery Crash Course</title>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <style>
+                body{
+                    font-size: 17px;
+                    font-family: ariel;
+                    background: #f4f4f4;
+                    line-height: 1.5em;
+                }
+                header {
+                    background: #333;
+                    color: #fff;
+                    padding: 20px;
+                    text-align: center;
+                    border-bottom: 4px #000 solid;
+                    margin-bottom: 10px;
+                }
+                #container {
+                    width: 90%;
+                    margin: auto;
+                    padding: 10px;
+                }
+                .myClass {
+                    color: blue;
+                    background: black;
+                }
+                #box {
+                    background: #333;
+                    color: #fff;
+                    width: 500px;
+                    height: 90px;
+                    padding: 40px;
+                    text-align: center;
 
-            #box {
-                background: #333;
-                color: #fff;
-                width: 500px;
-                height: 90px;
-                padding: 40px;
-                text-align: center;
-            }
-
-            #box2 {
-                background: red;
-                width:100px;
-                height: 100px;
-                position: relative;
-            }
-        </style>
-    </head>
+                }
+            </style>
+        </head>
     <body>
        <header>
            <h1>jQuery Crash Course | Effects & Animate</h1>
@@ -50,13 +46,13 @@
         <div id="container">
             <button id="btnFadeOut">Fade Out</button>
             <button id="btnFadeIn">Fade In</button>
-            <button id="btnFadeToggle">Fade Toggle</button>  
+            <button id="btnFadeTog">Fade Toggle</button>  
             
             <hr>
 
             <button id="btnSlideUp">Slide Up</button>
             <button id="btnSlideDown">Slide Down</button>
-            <button id="btnSlideToggle">Slide Toggle</button>  
+            <button id="btnSlideTog">Slide Toggle</button>  
             <button id="stop">Stop</button>
             <hr>
 
@@ -71,48 +67,32 @@
             <div id="box2"></div>
 
         </div>
-
         <script>
-            $(document).ready(function() {
-                // fade out on click
+            $(document).ready(function(){
                 $('#btnFadeOut').click(function(){
                     $('#box').fadeOut(3000, function(){
                         $('#btnFadeOut').text('Buh Bye');
                     });
                 });
-                // fade in on click
                 $('#btnFadeIn').click(function(){
-                    $('#box').fadeIn(3000, function(){
-                        $('#btnFadeIn').text('Sup');
-                    });
+                    $('#box').fadeIn(3000);
                 });
-                // on click fade out toggle on click fade in
-                $('#btnFadeToggle').click(function(){
+                $('#btnFadeTog').click(function(){
                     $('#box').fadeToggle(1000);
                 });
-                // slide up on click
                 $('#btnSlideDown').click(function(){
                     $('#box').slideDown(3000);
                 });
-                //slide down on click
                 $('#btnSlideUp').click(function(){
                     $('#box').slideUp(3000);
                 });
-                // toggle between slide up/down
-                $('#btnSlideToggle').click(function(){
-                    $('#box').slideToggle(1000);
+                $('#btnSlideTog').click(function(){
+                    $('#box').slideToggle(3000);
                 });
-                // click to stop action in action
                 $('#stop').click(function(){
                     $('#box').stop();
-                });
-                $('#moveRight').click(function(){
-                    ('#box2').animate({
-                        left: 500
-                    });
-                });
+                })
             });
-
         </script>
     </body>
 </html> 
