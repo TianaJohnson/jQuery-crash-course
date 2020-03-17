@@ -3,7 +3,7 @@
 
     <head>
             <title> jQuery Crash Course</title>
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
             <style>
                 body{
                     font-size: 17px;
@@ -35,7 +35,12 @@
                     height: 90px;
                     padding: 40px;
                     text-align: center;
-
+                }
+                #box2 {
+                    background: red;
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
                 }
             </style>
         </head>
@@ -91,6 +96,11 @@
                 });
                 $('#stop').click(function(){
                     $('#box').stop();
+                });
+                $('#moveRight').click(function(){
+                    $('#box2').animate({
+                        left: 500
+                    });
                 })
             });
         </script>
