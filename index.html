@@ -67,7 +67,7 @@
 
             <button id="moveLeft">Move Left</button>
             <button id="moveRight">Move Right</button>
-            <button id="moveAround">Fade Toggle</button> 
+            <button id="moveAround">Move around</button> 
             <br>
             <div id="box2"></div>
 
@@ -99,12 +99,18 @@
                 });
                 $('#moveRight').click(function(){
                     $('#box2').animate({
-                        left: 500
+                        left: 500,
+                        height: '300px',
+                        width: '300px',
+                        opacity: '0.5'
                     });
                 });
                 $('#moveLeft').click(function(){
                     $('#box2').animate({
-                        left: 0
+                        left: 0,
+                        height: '100px',
+                        width: '100px',
+                        opacity: '1'
                     });
                 });
             });
