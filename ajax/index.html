@@ -32,6 +32,7 @@
        </header>
         <div id="container">
             <div id="test"></div>
+            <ul id="users"></ul>
                 
                 </div>
         <script>
@@ -46,8 +47,14 @@
                 //         }
                 //     });
                 // same idea
-                $.get('test.html', function(data){
-                    $('#test').html(data);
+                // $.get('test.html', function(data){
+                //     $('#test').html(data);
+                // });
+                //for json
+                $.getJSON('users.json', function(data){
+                    $.each(data, function(i, user){
+                        $('ul#users').append('<li>'+user.firstName+'</li>')
+                    });
                 })
             });
 
