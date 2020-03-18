@@ -3,7 +3,7 @@
 
     <head>
         <title> jQuery Crash Course | Ajax</title>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <style>
             body{
                 font-size: 17px;
@@ -36,14 +36,7 @@
                 </div>
         <script>
             $(document).ready(function(){
-                $('#result').load('test.html', function(
-                    responseTxt, statusTxt, xhr){
-                        if(statusTxt == "success"){
-                            alert('It went finnnneee!');
-                        } else if(statusTxt == "error"){
-                            alert("May Day!:"+xhr.statusTxt);
-                        }
-                });
+                $('#result').load('tset.html');
             });
 
         </script>
