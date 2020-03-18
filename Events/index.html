@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+    <head>
+        <title> jQuery Crash Course | Events </title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        
+        <style>
+            body{
+                font-size: 17px;
+                font-family: ariel;
+                background: #f4f4f4;
+                line-height: 1.5em;
+            }
+            header {
+                background: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                border-bottom: 4px #000 solid;
+                margin-bottom: 10px;
+            }
+            #container {
+                width: 90%;
+                margin: auto;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+       <header>
+           <h1>jQuery Crash Course</h1>
+       </header>
+            <div id="container">
+                <h3>Mouse Events</h3>
+                <button id="btn1">Button 1</button>
+                <button id="btn2">Button 2</button>
+                <p class="para1">Lorem ipsum dolor sit amet, consectetur
+                     adipiscing elit, sed do eiusmod tempor incididunt ut
+                     labore et dolore magna aliqua. Ut enim ad minim veniam,
+                     quis nostrud exercitation ullamco laboris nisi ut 
+                     aliquip ex ea commodo consequat. Duis aute irure dolor
+                     in reprehenderit in voluptate velit esse cillum dolore
+                     eu fugiat nulla pariatur. Excepteur sint occaecat
+                     cupidatat non proident, sunt in culpa qui officia 
+                     deserunt mollit anim id est laborum.</p>
+
+                <h1 id="coords"></h1>
+                <hr>
+                <form>
+                    <label>Name</label><br>
+                    <input type="text" id="name" name="name">
+                    <br>
+                    <label>Email</label><br>
+                    <input type="text" id="email" name="email">
+                    <br>
+                    <label>Gender</label><br>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Gender is a construct</option>
+                    </select>
+                    <br>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        <script>
+            // document ready waits for everything to load
+            // before actions can be utalized
+            $(document).ready(function(){
+            // $('#btn1').click(function(){
+            //     alert('Button Clicked!');
+            // });
+            // $('#btn1').on('click', function(){
+            //     alert('Second Button Click!');
+            // });
+            // $('#btn1').on('click', function(){
+            //     //$('.para1').hide();
+            //     $('.para1').toggle();
+            // });
+            // $('#btn2').on('click', function(){
+            //     $('.para1').show();
+            // });
+            // $('#btn1').dblclick(function(){
+            //     $('.para1').toggle();
+            // });
+            // $('#btn1').hover(function(){
+            //     $('.para1').toggle();
+            // });
+
+            //^ hover is shorthand for below
+            // $('#btn1').on('mouseenter', function(){
+            //     $('.para1').toggle();
+            // });
+            // $('#btn1').on('mouseleave', function(){
+            //     $('.para1').toggle();
+            // });
+            // -------- 
+            // $('#btn1').on('mousemove', function(){
+            //     $('.para1').toggle();
+            // });
+            // $('#btn1').on('mousedown', function(){
+            //     $('.para1').toggle();
+            // });
+            // $('#btn1').on('mouseup', function(){
+            //     $('.para1').toggle();
+            // });
+            // $('#btn1').click(function(e){
+            //     //alert(e.currentTarget.id);
+            //     // alert(e.currentTarget.innerHTML);
+            //     // alert(e.currentTarget.outerHTML);
+            //     // alert(e.currentTarget.className);
+            // });
+            // $(document).on('mousemove', function(e){
+            //     $('#coords').html('Coords: Y: '+e.clientY+" X: "+ e.clientX);
+            // });
+
+            // $('input').focus(function(){
+            //     //alert('Focus');
+            //     $(this).css('background', 'pink');
+            // });
+            // $('input').blur(function(){
+            //     //alert('Focus');
+            //     $(this).css('background', 'lightblue');
+            // });
+            // $('input').keyup(function(e){
+            //     console.log('keyup: '+e.target.value);
+                
+            // });
+            // $('select#gender').change(function(e){
+            //     alert('changed:'+e.target.value);
+            // });
+
+            $('form').submit(function(e){
+                e.preventDefault();
+                let name = $('input#name').val();
+                console.log(name);
+            });
+            
+
+        }); 
+        </script>
+    </body>
+</html> 
