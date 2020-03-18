@@ -36,7 +36,14 @@
                 </div>
         <script>
             $(document).ready(function(){
-                $('#result').load('test.html');
+                $('#result').load('test.html', function(
+                    responseTxt, statusTxt, xhr){
+                        if(statusTxt == "success"){
+                            alert('It went finnnneee!');
+                        } else if(statusTxt == "error"){
+                            alert("May Day!:"+xhr.statusTxt);
+                        }
+                });
             });
 
         </script>
